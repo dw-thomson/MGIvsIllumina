@@ -1,0 +1,365 @@
+Aug-14 11:24:09.865 [main] DEBUG nextflow.cli.Launcher - $> nextflow run nf-core/differentialabundance -r 1.4.0 -profile rnaseq,singularity --input nfSampleSheetX.csv --contrasts contrasts.csv --matrix /homes/daniel.thomson/projects/MGIvsIllumina/nfRNAseq_GRCh38_ensembl/nfcoreRNAseq-outs/star_salmon/salmon.merged.gene_counts.tsv --transcript_length_matrix /homes/daniel.thomson/projects/MGIvsIllumina/nfRNAseq_GRCh38_ensembl/nfcoreRNAseq-outs/star_salmon/salmon.merged.gene_lengths.tsv --gtf /homes/daniel.thomson/References/GRCh38/Ensembl_download/Homo_sapiens.GRCh38.111.gtf --outdir /homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/outs --features_id_col gene_id --features_name_col gene_name --features_type gene --study_name MGIvsIllumina --study_type rnaseq --shinyngs_build_app true --email daniel.thomson@sahmri.com --logo_file /cancer/storage/SAGC/workflows/nf-qc-sagc/prod/docs/figures/sagc-logo.png --report_title MGIvsIllumina --report_author 'Daniel Thomson (daniel.thomson@sahmri.com.au)' --report_scree FALSE --gsea_run --gsea_gene_sets /homes/daniel.thomson/References/GSEA/c5.all.v2023.2.Hs.symbols.gmt --gsea_make_sets --gsea_zip_report -resume
+Aug-14 11:24:09.995 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Aug-14 11:24:10.032 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/homes/daniel.thomson/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Aug-14 11:24:10.057 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-14 11:24:10.060 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-14 11:24:10.066 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Aug-14 11:24:10.084 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-14 11:24:10.104 [main] DEBUG nextflow.scm.ProviderConfig - Using SCM config path: /homes/daniel.thomson/.nextflow/scm
+Aug-14 11:24:11.672 [main] DEBUG nextflow.scm.AssetManager - Git config: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/differentialabundance.git
+Aug-14 11:24:11.709 [main] DEBUG nextflow.scm.RepositoryFactory - Found Git repository result: [RepositoryFactory]
+Aug-14 11:24:11.723 [main] DEBUG nextflow.scm.AssetManager - Git config: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/.git/config; branch: master; remote: origin; url: https://github.com/nf-core/differentialabundance.git
+Aug-14 11:24:13.333 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/nextflow.config
+Aug-14 11:24:13.336 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/nextflow.config
+Aug-14 11:24:13.356 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `rnaseq,singularity`
+Aug-14 11:24:15.933 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [bih, cfc_dev, uzl_omics, ifb_core, embl_hd, denbi_qbic, alice, mjolnir_globe, uppmax, incliva, ilifu, uge, rosalind_uge, lugh, mccleary, unibe_ibu, vai, soft, test_soft, czbiohub_aws, jax, ccga_med, scw, unc_longleaf, tigem, tubingen_apg, google, apollo, ipop_up, vsc_calcua, pdc_kth, googlels, daisybio, eddie, medair, biowulf, test_maxquant, apptainer, bi, bigpurple, adcra, cedars, pawsey_setonix, vsc_kul_uhasselt, pawsey_nimbus, ucl_myriad, utd_ganymede, charliecloud, icr_davros, ceres, munin, arm, rosalind, rnaseq, hasta, cfc, uzh, ebi_codon_slurm, ebc, ccga_dx, crick, ku_sund_danhead, marvin, biohpc_gen, shifter, mana, mamba, york_viking, unc_lccc, wehi, awsbatch, wustl_htcf, arcc, imperial, maestro, software_license, genotoul, nci_gadi, abims, janelia, nu_genomics, googlebatch, oist, sahmri, affy, mpcdf, leicester, vsc_ugent, create, sage, cambridge, jex, podman, ebi_codon, cheaha, xanadu, nyu_hpc, test, marjorie, computerome, ucd_sonic, seg_globe, sanger, dkfz, pasteur, einstein, ethz_euler, m3c, test_full, imb, ucl_cscluster, tuos_stanage, azurebatch, hki, crukmi, csiro_petrichor, qmul_apocrita, docker, engaging, gis, hypatia, psmn, eva, nygc, test_nogtf, fgcz, conda, crg, singularity, self_hosted_runner, tufts, uw_hyak_pedslabs, debug, test_affy, genouest, cbe, phoenix, gitpod, seawulf, uod_hpc, fub_curta, uct_hpc, aws_tower, binac]
+Aug-14 11:24:15.955 [main] WARN  nextflow.config.ConfigBuilder - It appears you have never run this project before -- Option `-resume` is ignored
+Aug-14 11:24:16.030 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Aug-14 11:24:16.031 [main] INFO  nextflow.cli.CmdRun - Launching `https://github.com/nf-core/differentialabundance` [peaceful_brattain] DSL2 - revision: a3d664c12c [1.4.0]
+Aug-14 11:24:16.034 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-validation]
+Aug-14 11:24:16.035 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-14 11:24:16.035 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-validation]
+Aug-14 11:24:16.036 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-validation version: latest
+Aug-14 11:24:16.595 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-validation@1.1.4' resolved
+Aug-14 11:24:16.597 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-validation@1.1.4'
+Aug-14 11:24:16.822 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-validation@1.1.4
+Aug-14 11:24:16.854 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /homes/daniel.thomson/.nextflow/secrets/store.json
+Aug-14 11:24:16.864 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@6be8ce1b] - activable => nextflow.secret.LocalSecretsProvider@6be8ce1b
+Aug-14 11:24:16.967 [main] DEBUG nextflow.Session - Session UUID: 2ef42c00-f8e9-4bc7-84b4-094552d12b62
+Aug-14 11:24:16.968 [main] DEBUG nextflow.Session - Run name: peaceful_brattain
+Aug-14 11:24:16.970 [main] DEBUG nextflow.Session - Executor pool size: 6
+Aug-14 11:24:16.987 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Aug-14 11:24:16.993 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=18; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Aug-14 11:24:17.088 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (16-10-2023 01:37 ACDT)
+  System: Linux 5.15.0-52-generic
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 17.0.9-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 3712709@hpc-lin-cmp02 [172.25.104.182]
+  CPUs: 6 - Mem: 125.6 GB (125.2 GB) - Swap: 4 GB (3.8 GB)
+Aug-14 11:24:17.170 [main] DEBUG nextflow.Session - Work-dir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work [gpfs]
+Aug-14 11:24:17.192 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-14 11:24:17.209 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-14 11:24:17.368 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-14 11:24:17.380 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 7; maxThreads: 1000
+Aug-14 11:24:17.585 [main] DEBUG nextflow.Session - Session start
+Aug-14 11:24:17.594 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/outs/pipeline_info/execution_trace_2024-08-14_11-24-14.txt
+Aug-14 11:24:17.622 [main] DEBUG nextflow.Session - Using default localLib path: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/lib
+Aug-14 11:24:17.630 [main] DEBUG nextflow.Session - Adding to the classpath library: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/lib
+Aug-14 11:24:17.633 [main] DEBUG nextflow.Session - Adding to the classpath library: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/lib/nfcore_external_java_deps.jar
+Aug-14 11:24:18.381 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-14 11:24:18.405 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters, paramsHelp:paramsHelp]; plugin Id: nf-validation
+Aug-14 11:24:18.460 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
+Aug-14 11:24:18.792 [main] DEBUG nextflow.validation.SchemaValidator - Starting validation: 'input': '/hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/nfSampleSheetX.csv' with '/homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/assets/schema_input.json'
+Aug-14 11:24:18.893 [main] DEBUG nextflow.validation.SchemaValidator - Validation passed: 'input': '/hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/nfSampleSheetX.csv' with '/homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/assets/schema_input.json'
+Aug-14 11:24:18.894 [main] DEBUG nextflow.validation.SchemaValidator - Finishing parameters validation
+Aug-14 11:24:20.160 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [paramsSummaryLog:paramsSummaryLog, paramsSummaryMap:paramsSummaryMap]; plugin Id: nf-validation
+Aug-14 11:24:20.192 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+                                        [0;32m,--.[0;30m/[0;32m,-.[0m
+[0;34m        ___     __   __   __   ___     [0;32m/,-._.--~'[0m
+[0;34m  |\ | |__  __ /  ` /  \ |__) |__         [0;33m}  {[0m
+[0;34m  | \| |       \__, \__/ |  \ |___     [0;32m\`-._,-`-,[0m
+                                        [0;32m`._,._,'[0m
+[0;35m  nf-core/differentialabundance v1.4.0-ga3d664c[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrevision                    : [0;32m1.4.0[0m
+  [0;34mrunName                     : [0;32mpeaceful_brattain[0m
+  [0;34mcontainerEngine             : [0;32msingularity[0m
+  [0;34mcontainer                   : [0;32m[RMARKDOWNNOTEBOOK:biocontainers/r-shinyngs:1.8.4--r43hdfd78af_0][0m
+  [0;34mlaunchDir                   : [0;32m/hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl[0m
+  [0;34mworkDir                     : [0;32m/hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work[0m
+  [0;34mprojectDir                  : [0;32m/homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance[0m
+  [0;34muserName                    : [0;32mdaniel.thomson[0m
+  [0;34mprofile                     : [0;32mrnaseq,singularity[0m
+  [0;34mconfigFiles                 : [0;32m[0m
+
+[1mInput/output options[0m
+  [0;34mstudy_name                  : [0;32mMGIvsIllumina[0m
+  [0;34minput                       : [0;32mnfSampleSheetX.csv[0m
+  [0;34mcontrasts                   : [0;32mcontrasts.csv[0m
+  [0;34moutdir                      : [0;32m/homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/outs[0m
+
+[1mAbundance values[0m
+  [0;34mmatrix                      : [0;32m/homes/daniel.thomson/projects/MGIvsIllumina/nfRNAseq_GRCh38_ensembl/nfcoreRNAseq-outs/star_salmon/salmon.merged.gene_counts.tsv[0m
+  [0;34mtranscript_length_matrix    : [0;32m/homes/daniel.thomson/projects/MGIvsIllumina/nfRNAseq_GRCh38_ensembl/nfcoreRNAseq-outs/star_salmon/salmon.merged.gene_lengths.tsv[0m
+  [0;34maffy_cel_files_archive      : [0;32mnull[0m
+  [0;34mquerygse                    : [0;32mnull[0m
+
+[1mAffy input options[0m
+  [0;34maffy_cdfname                : [0;32mnull[0m
+
+[1mProteus input options[0m
+  [0;34mproteus_round_digits        : [0;32m-1[0m
+
+[1mFiltering[0m
+  [0;34mfiltering_min_abundance     : [0;32m1[0m
+  [0;34mfiltering_min_samples       : [0;32m1[0m
+
+[1mDifferential analysis[0m
+  [0;34mdifferential_min_fold_change: [0;32m2[0m
+  [0;34mdifferential_max_pval       : [0;32m1[0m
+
+[1mLimma specific options (microarray only)[0m
+  [0;34mlimma_spacing               : [0;32mnull[0m
+  [0;34mlimma_block                 : [0;32mnull[0m
+  [0;34mlimma_correlation           : [0;32mnull[0m
+  [0;34mlimma_p_value               : [0;32m1[0m
+
+[1mGSEA[0m
+  [0;34mgsea_run                    : [0;32mtrue[0m
+  [0;34mgsea_zip_report             : [0;32mtrue[0m
+  [0;34mgsea_gene_sets              : [0;32m/homes/daniel.thomson/References/GSEA/c5.all.v2023.2.Hs.symbols.gmt[0m
+
+[1mShiny app settings[0m
+  [0;34mshinyngs_shinyapps_account  : [0;32mnull[0m
+  [0;34mshinyngs_shinyapps_app_name : [0;32mnull[0m
+
+[1mReporting options[0m
+  [0;34mreport_file                 : [0;32m/homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/assets/differentialabundance_report.Rmd[0m
+  [0;34memail                       : [0;32mdaniel.thomson@sahmri.com[0m
+  [0;34mlogo_file                   : [0;32m/cancer/storage/SAGC/workflows/nf-qc-sagc/prod/docs/figures/sagc-logo.png[0m
+  [0;34mcss_file                    : [0;32m/homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/assets/nf-core_style.css[0m
+  [0;34mcitations_file              : [0;32m/homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/CITATIONS.md[0m
+  [0;34mreport_title                : [0;32mMGIvsIllumina[0m
+  [0;34mreport_author               : [0;32mDaniel Thomson (daniel.thomson@sahmri.com.au)[0m
+  [0;34mreport_description          : [0;32mnull[0m
+  [0;34mreport_scree                : [0;32mfalse[0m
+
+[1mReference genome options[0m
+  [0;34mgtf                         : [0;32m/homes/daniel.thomson/References/GRCh38/Ensembl_download/Homo_sapiens.GRCh38.111.gtf[0m
+
+[1mInstitutional config options[0m
+  [0;34mconfig_profile_name         : [0;32mRNA-seq profile[0m
+  [0;34mconfig_profile_description  : [0;32mSettings for RNA-seq analysis[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use nf-core/differentialabundance for your analysis please cite:
+
+* The pipeline
+  https://doi.org/10.5281/zenodo.7568000
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/differentialabundance/blob/master/CITATIONS.md
+
+Aug-14 11:24:22.630 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE
+Aug-14 11:24:22.635 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GTF_TO_TABLE` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE
+Aug-14 11:24:22.645 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:22.646 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:22.657 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-14 11:24:22.669 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=6; memory=125.6 GB; capacity=6; pollInterval=100ms; dumpInterval=5m
+Aug-14 11:24:22.675 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Aug-14 11:24:22.795 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR
+Aug-14 11:24:22.796 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:VALIDATOR` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR
+Aug-14 11:24:22.801 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:22.803 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:22.825 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER
+Aug-14 11:24:22.826 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_MATRIXFILTER` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER
+Aug-14 11:24:22.832 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:22.833 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:22.853 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_NORM
+Aug-14 11:24:22.855 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:DESEQ2_DIFFERENTIAL` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_NORM
+Aug-14 11:24:22.858 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:DESEQ2_NORM` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_NORM
+Aug-14 11:24:22.863 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:22.864 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:22.877 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_DIFFERENTIAL
+Aug-14 11:24:22.878 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:DESEQ2_DIFFERENTIAL` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_DIFFERENTIAL
+Aug-14 11:24:22.881 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:22.882 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:22.899 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEAGCT
+Aug-14 11:24:22.901 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_TABULARTOGSEAGCT` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEAGCT
+Aug-14 11:24:22.904 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:22.905 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:22.928 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEACLS
+Aug-14 11:24:22.930 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_TABULARTOGSEACLS` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEACLS
+Aug-14 11:24:22.932 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:22.935 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:22.942 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:TABULAR_TO_GSEA_CHIP
+Aug-14 11:24:22.944 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:TABULAR_TO_GSEA_CHIP` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:TABULAR_TO_GSEA_CHIP
+Aug-14 11:24:22.945 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:22.946 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:22.970 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA
+Aug-14 11:24:22.972 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:GSEA_GSEA` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA
+Aug-14 11:24:22.984 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:22.987 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:23.027 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY
+Aug-14 11:24:23.028 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PLOT_EXPLORATORY` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY
+Aug-14 11:24:23.030 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:23.031 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:23.040 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL
+Aug-14 11:24:23.041 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:PLOT_DIFFERENTIAL` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL
+Aug-14 11:24:23.043 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:23.044 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:23.084 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_DUMPSOFTWAREVERSIONS
+Aug-14 11:24:23.085 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CUSTOM_DUMPSOFTWAREVERSIONS` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_DUMPSOFTWAREVERSIONS
+Aug-14 11:24:23.087 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:23.088 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:23.187 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP
+Aug-14 11:24:23.188 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SHINYNGS_APP` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP
+Aug-14 11:24:23.191 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:23.192 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:23.217 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK
+Aug-14 11:24:23.218 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:RMARKDOWNNOTEBOOK` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK
+Aug-14 11:24:23.221 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:23.222 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:23.240 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_single` matches labels `process_single` for process with name NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE
+Aug-14 11:24:23.242 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MAKE_REPORT_BUNDLE` matches process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE
+Aug-14 11:24:23.244 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-14 11:24:23.245 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-14 11:24:23.251 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: VALIDATOR, ZIP, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER, CUSTOM_TABULARTOGSEAGCT, MAKE_REPORT_BUNDLE, ATLASGENEANNOTATIONMANIPULATION_GTF2FEATUREANNOTATION, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA, PLOT_DIFFERENTIAL, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_NORM, GSEA_GSEA, SHINYNGS_VALIDATEFOMCOMPONENTS, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP, GUNZIP_GTF, AFFY_JUSTRMA, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:TABULAR_TO_GSEA_CHIP, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_DUMPSOFTWAREVERSIONS, TABULAR_TO_GSEA_CHIP, CUSTOM_TABULARTOGSEACLS, GUNZIP, SHINYNGS_STATICDIFFERENTIAL, UNTAR, AFFY_JUSTRMA_RAW, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK, GEOQUERY_GETGEO, GTF_TO_TABLE, PROTEUS_READPROTEINGROUPS, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEAGCT, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE, DESEQ2_DIFFERENTIAL, SHINYNGS_STATICEXPLORATORY, DESEQ2_NORM, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_DIFFERENTIAL, RMARKDOWNNOTEBOOK, LIMMA_DIFFERENTIAL, SHINYNGS_APP, CUSTOM_DUMPSOFTWAREVERSIONS, CUSTOM_MATRIXFILTER, PLOT_EXPLORATORY, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEACLS, PROTEUS, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY, AFFY_JUSTRMA_NORM, NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL
+Aug-14 11:24:23.257 [main] DEBUG nextflow.Session - Igniting dataflow network (25)
+Aug-14 11:24:23.259 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE
+Aug-14 11:24:23.272 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR
+Aug-14 11:24:23.273 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER
+Aug-14 11:24:23.274 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_NORM
+Aug-14 11:24:23.274 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_DIFFERENTIAL
+Aug-14 11:24:23.275 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEAGCT
+Aug-14 11:24:23.276 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEACLS
+Aug-14 11:24:23.277 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:TABULAR_TO_GSEA_CHIP
+Aug-14 11:24:23.278 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA
+Aug-14 11:24:23.279 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY
+Aug-14 11:24:23.280 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL
+Aug-14 11:24:23.281 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_DUMPSOFTWAREVERSIONS
+Aug-14 11:24:23.282 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP
+Aug-14 11:24:23.282 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK
+Aug-14 11:24:23.283 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE
+Aug-14 11:24:23.285 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_736359fe28427d7c: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/atlasgeneannotationmanipulation/gtf2featureannotation/main.nf
+  Script_0b2b547b5bd8d72f: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/deseq2/differential/main.nf
+  Script_bd162165863945c5: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/shinyngs/validatefomcomponents/main.nf
+  Script_8258fa18ec202f1e: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/geoquery/getgeo/main.nf
+  Script_fd29bcfb844eda4d: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/limma/differential/main.nf
+  Script_e11ffbac6afe36ec: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/gsea/gsea/main.nf
+  Script_c3c7f0ae80cda0cc: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/shinyngs/staticexploratory/main.nf
+  Script_f291caf4f7573aca: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/custom/tabulartogseagct/main.nf
+  Script_66ffa6df5b55d922: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/main.nf
+  Script_af0fb319323fde68: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/affy/justrma/main.nf
+  Script_61045595cd57fdfa: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/custom/tabulartogseacls/main.nf
+  Script_cb1a92e48950cb6f: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/shinyngs/app/main.nf
+  Script_36fafb73beaa89a0: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/rmarkdownnotebook/main.nf
+  Script_a9670c657bdfaa03: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/local/tabular_to_gsea_chip.nf
+  Script_980ffca4de0b9bc8: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/shinyngs/staticdifferential/main.nf
+  Script_1a6661f1fced92e0: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/rmarkdownnotebook/./parametrize.nf
+  Script_c901260d3c3d641a: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/custom/matrixfilter/main.nf
+  Script_777604ec37a36f79: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/custom/dumpsoftwareversions/main.nf
+  Script_66471300492dce16: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/differentialabundance.nf
+  Script_7002cd4537b0f229: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/proteus/readproteingroups/main.nf
+  Script_079385570c0cda9d: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/untar/main.nf
+  Script_b4abc93ac1f4bba3: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/zip/main.nf
+  Script_a71c717f63173976: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/./workflows/../modules/nf-core/gunzip/main.nf
+Aug-14 11:24:23.286 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Aug-14 11:24:23.287 [main] DEBUG nextflow.Session - Session await
+Aug-14 11:24:23.372 [Actor Thread 5] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/atlas-gene-annotation-manipulation%3A1.1.0--hdfd78af_0; path=/homes/daniel.thomson/singularity_cache/depot.galaxyproject.org-singularity-atlas-gene-annotation-manipulation%3A1.1.0--hdfd78af_0.img
+Aug-14 11:24:23.523 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:24:23.530 [Task submitter] INFO  nextflow.Session - [69/b362c7] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE (Homo_sapiens)
+Aug-14 11:24:52.612 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE (Homo_sapiens); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/69/b362c77188600e2558ca46387a384c]
+Aug-14 11:24:52.814 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GTF_TO_TABLE > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Aug-14 11:24:52.820 [Actor Thread 7] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/r-shinyngs:1.8.4--r43hdfd78af_0; path=/homes/daniel.thomson/singularity_cache/depot.galaxyproject.org-singularity-r-shinyngs-1.8.4--r43hdfd78af_0.img
+Aug-14 11:24:52.844 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=18; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Aug-14 11:24:52.858 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:24:52.863 [Task submitter] INFO  nextflow.Session - [13/f2a5c0] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR (nfSampleSheetX.csv)
+Aug-14 11:25:21.887 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:VALIDATOR (nfSampleSheetX.csv); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/13/f2a5c0d2a1e788004478a435de6eda]
+Aug-14 11:25:21.918 [Actor Thread 7] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/gawk:5.1.0; path=/homes/daniel.thomson/singularity_cache/depot.galaxyproject.org-singularity-gawk-5.1.0.img
+Aug-14 11:25:21.950 [Actor Thread 5] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/ubuntu:20.04; path=/homes/daniel.thomson/singularity_cache/depot.galaxyproject.org-singularity-ubuntu-20.04.img
+Aug-14 11:25:21.969 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:25:21.971 [Task submitter] INFO  nextflow.Session - [55/e6bf8a] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:TABULAR_TO_GSEA_CHIP (1)
+Aug-14 11:25:22.011 [Actor Thread 15] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/r-base:4.2.1; path=/homes/daniel.thomson/singularity_cache/depot.galaxyproject.org-singularity-r-base-4.2.1.img
+Aug-14 11:25:22.019 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:25:22.020 [Task submitter] INFO  nextflow.Session - [8e/6e785c] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEACLS (MGIvsIllumina)
+Aug-14 11:25:22.040 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:25:22.041 [Task submitter] INFO  nextflow.Session - [ab/0cba5b] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER ([id:MGIvsIllumina])
+Aug-14 11:25:23.049 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEACLS (MGIvsIllumina); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/8e/6e785cb75c2f6cddd5a2557a6622d7]
+Aug-14 11:25:23.898 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:TABULAR_TO_GSEA_CHIP (1); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/55/e6bf8a088deeed85c2ab62e8f552e2]
+Aug-14 11:25:28.503 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_MATRIXFILTER ([id:MGIvsIllumina]); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/ab/0cba5b69a6a5eba8a7211b07d58804]
+Aug-14 11:25:28.585 [Actor Thread 16] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/bioconductor-deseq2:1.34.0--r41hc247a5b_3; path=/homes/daniel.thomson/singularity_cache/depot.galaxyproject.org-singularity-bioconductor-deseq2-1.34.0--r41hc247a5b_3.img
+Aug-14 11:25:28.623 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:25:28.625 [Task submitter] INFO  nextflow.Session - [85/03330d] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_NORM ([id:MGIvsIllumina, variable:contrast, reference:NextSeq, target:MGI-G400, blocking:])
+Aug-14 11:29:22.843 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_NORM ([id:MGIvsIllumina, variable:contrast, reference:NextSeq, target:MGI-G400, blocking:]); status: RUNNING; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/85/03330dbcb003e06a81498602336c9f]
+Aug-14 11:29:48.012 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_NORM ([id:MGIvsIllumina, variable:contrast, reference:NextSeq, target:MGI-G400, blocking:]); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/85/03330dbcb003e06a81498602336c9f]
+Aug-14 11:29:48.042 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:29:48.045 [Task submitter] INFO  nextflow.Session - [09/daf9ef] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_DIFFERENTIAL ([id:MGIvsIllumina, variable:contrast, reference:NextSeq, target:MGI-G400, blocking:])
+Aug-14 11:29:48.053 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_NORM > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Aug-14 11:30:29.107 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 2 -- tasks to be submitted are shown below
+~> TaskHandler[id: 9; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY (contrast); status: NEW; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/03/008834b83f6dd09c6246548a0c959c]
+~> TaskHandler[id: 8; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEAGCT (MGIvsIllumina); status: NEW; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/82/e777572ceaeb03f50c891e4812a2aa]
+Aug-14 11:34:00.599 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_DIFFERENTIAL ([id:MGIvsIllumina, variable:contrast, reference:NextSeq, target:MGI-G400, blocking:]); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/09/daf9ef3ec6a068fa08be6045367344]
+Aug-14 11:34:00.628 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:34:00.629 [Task submitter] INFO  nextflow.Session - [03/008834] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY (contrast)
+Aug-14 11:34:00.636 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:DESEQ2_DIFFERENTIAL > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Aug-14 11:34:00.642 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:34:00.643 [Task submitter] INFO  nextflow.Session - [82/e77757] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEAGCT (MGIvsIllumina)
+Aug-14 11:34:00.675 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:34:00.675 [Task submitter] INFO  nextflow.Session - [59/be34fd] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL (MGIvsIllumina)
+Aug-14 11:34:00.724 [Actor Thread 2] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-313607754145389510
+Aug-14 11:34:00.762 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:34:00.763 [Task submitter] INFO  nextflow.Session - [0f/08849f] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP (MGIvsIllumina)
+Aug-14 11:34:02.113 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_TABULARTOGSEAGCT (MGIvsIllumina); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/82/e777572ceaeb03f50c891e4812a2aa]
+Aug-14 11:34:02.135 [Actor Thread 15] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/gsea:4.3.2--hdfd78af_0; path=/homes/daniel.thomson/singularity_cache/depot.galaxyproject.org-singularity-gsea-4.3.2--hdfd78af_0.img
+Aug-14 11:34:02.158 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 11:34:02.159 [Task submitter] INFO  nextflow.Session - [c0/130293] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA (MGIvsIllumina)
+Aug-14 11:34:22.863 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 4 -- submitted tasks are shown below
+~> TaskHandler[id: 9; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY (contrast); status: RUNNING; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/03/008834b83f6dd09c6246548a0c959c]
+~> TaskHandler[id: 10; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL (MGIvsIllumina); status: RUNNING; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/59/be34fd4090f4b4d939c897c107b3a3]
+~> TaskHandler[id: 11; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP (MGIvsIllumina); status: RUNNING; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/0f/08849f9c911bd02ee261a0cad3f230]
+~> TaskHandler[id: 12; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA (MGIvsIllumina); status: RUNNING; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/c0/13029385fb228dd4d380ae7f6f151e]
+Aug-14 11:34:25.989 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL (MGIvsIllumina); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/59/be34fd4090f4b4d939c897c107b3a3]
+Aug-14 11:34:26.002 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_DIFFERENTIAL > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Aug-14 11:34:32.538 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:SHINYNGS_APP (MGIvsIllumina); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/0f/08849f9c911bd02ee261a0cad3f230]
+Aug-14 11:35:30.810 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY (contrast); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/03/008834b83f6dd09c6246548a0c959c]
+Aug-14 11:35:30.884 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY > Skipping output binding because one or more optional files are missing: fileoutparam<1:1>
+Aug-14 11:35:30.885 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Aug-14 11:35:30.886 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Aug-14 11:35:30.891 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY > Skipping output binding because one or more optional files are missing: fileoutparam<7:1>
+Aug-14 11:35:30.892 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:PLOT_EXPLORATORY > Skipping output binding because one or more optional files are missing: fileoutparam<9:1>
+Aug-14 11:39:22.887 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 12; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA (MGIvsIllumina); status: RUNNING; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/c0/13029385fb228dd4d380ae7f6f151e]
+Aug-14 11:44:22.962 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 12; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA (MGIvsIllumina); status: RUNNING; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/c0/13029385fb228dd4d380ae7f6f151e]
+Aug-14 11:49:23.003 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 12; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA (MGIvsIllumina); status: RUNNING; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/c0/13029385fb228dd4d380ae7f6f151e]
+Aug-14 11:54:23.082 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 12; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA (MGIvsIllumina); status: RUNNING; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/c0/13029385fb228dd4d380ae7f6f151e]
+Aug-14 11:59:23.121 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 12; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA (MGIvsIllumina); status: RUNNING; exit: -; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/c0/13029385fb228dd4d380ae7f6f151e]
+Aug-14 12:01:06.447 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:GSEA_GSEA (MGIvsIllumina); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/c0/13029385fb228dd4d380ae7f6f151e]
+Aug-14 12:01:06.922 [Actor Thread 16] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 7; slices: 1; internal sort time: 0.08 s; external sort time: 0.002 s; total time: 0.082 s
+Aug-14 12:01:06.956 [Actor Thread 16] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/collect-file/0a47787bcdf9b0932546c7c290e1b36e
+Aug-14 12:01:06.998 [Actor Thread 16] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-6269904590937394143
+Aug-14 12:01:07.070 [Actor Thread 16] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/multiqc:1.15--pyhdfd78af_0; path=/homes/daniel.thomson/singularity_cache/depot.galaxyproject.org-singularity-multiqc-1.15--pyhdfd78af_0.img
+Aug-14 12:01:07.125 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 12:01:07.131 [Task submitter] INFO  nextflow.Session - [60/670d65] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_DUMPSOFTWAREVERSIONS (1)
+Aug-14 12:01:09.308 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:CUSTOM_DUMPSOFTWAREVERSIONS (1); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/60/670d655426a72ea84ca973027288f4]
+Aug-14 12:01:09.539 [Actor Thread 21] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/assets/differentialabundance_report.Rmd
+Aug-14 12:01:09.568 [Actor Thread 21] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/assets/nf-core_style.css
+Aug-14 12:01:09.570 [Actor Thread 21] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/CITATIONS.md
+Aug-14 12:01:09.606 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 12:01:09.607 [Task submitter] INFO  nextflow.Session - [e2/d8f315] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK (MGIvsIllumina)
+Aug-14 12:02:16.853 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK (MGIvsIllumina); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/e2/d8f315c8f8890c35d30a72982c7d21]
+Aug-14 12:02:16.873 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:RMARKDOWNNOTEBOOK > Skipping output binding because one or more optional files are missing: fileoutparam<2:1>
+Aug-14 12:02:16.883 [Actor Thread 21] DEBUG nextflow.container.SingularityCache - Singularity found local store for image=https://depot.galaxyproject.org/singularity/p7zip:16.02; path=/homes/daniel.thomson/singularity_cache/depot.galaxyproject.org-singularity-p7zip-16.02.img
+Aug-14 12:02:16.905 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-14 12:02:16.906 [Task submitter] INFO  nextflow.Session - [48/110e9c] Submitted process > NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE (MGIvsIllumina)
+Aug-14 12:02:19.780 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: NFCORE_DIFFERENTIALABUNDANCE:DIFFERENTIALABUNDANCE:MAKE_REPORT_BUNDLE (MGIvsIllumina); status: COMPLETED; exit: 0; error: -; workDir: /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work/48/110e9cc68803fc8dbb7572514ad974]
+Aug-14 12:02:19.784 [main] DEBUG nextflow.Session - Session await > all processes finished
+Aug-14 12:02:19.786 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Aug-14 12:02:19.787 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-14 12:02:20.353 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Aug-14 12:02:20.634 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/differentialabundance][0;32m Sent summary e-mail to daniel.thomson@sahmri.com (sendmail)-
+Aug-14 12:02:20.703 [main] INFO  nextflow.Nextflow - -[0;35m[nf-core/differentialabundance][0;32m Pipeline completed successfully[0m-
+Aug-14 12:02:20.710 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=15; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=1h 23m 45s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=4; peakCpus=6; peakMemory=42 GB; ]
+Aug-14 12:02:20.710 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Aug-14 12:02:20.759 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Aug-14 12:02:21.689 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Aug-14 12:02:22.018 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Aug-14 12:02:22.023 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-validation@1.1.4'
+Aug-14 12:02:22.025 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-validation
+Aug-14 12:02:22.059 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Aug-14 12:02:22.061 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

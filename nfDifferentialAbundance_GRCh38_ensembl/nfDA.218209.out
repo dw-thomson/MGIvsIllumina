@@ -1,0 +1,602 @@
+[33mNextflow 24.04.4 is available - Please consider updating your version to it(B[m
+N E X T F L O W  ~  version 23.10.0
+WARN: It appears you have never run this project before -- Option `-resume` is ignored
+Launching `https://github.com/nf-core/differentialabundance` [peaceful_brattain] DSL2 - revision: a3d664c12c [1.4.0]
+
+
+------------------------------------------------------
+                                        ,--./,-.
+        ___     __   __   __   ___     /,-._.--~'
+  |\ | |__  __ /  ` /  \ |__) |__         }  {
+  | \| |       \__, \__/ |  \ |___     \`-._,-`-,
+                                        `._,._,'
+  nf-core/differentialabundance v1.4.0-ga3d664c
+------------------------------------------------------
+Core Nextflow options
+  revision                    : 1.4.0
+  runName                     : peaceful_brattain
+  containerEngine             : singularity
+  container                   : [RMARKDOWNNOTEBOOK:biocontainers/r-shinyngs:1.8.4--r43hdfd78af_0]
+  launchDir                   : /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl
+  workDir                     : /hpc/vnx_homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/work
+  projectDir                  : /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance
+  userName                    : daniel.thomson
+  profile                     : rnaseq,singularity
+  configFiles                 : 
+
+Input/output options
+  study_name                  : MGIvsIllumina
+  input                       : nfSampleSheetX.csv
+  contrasts                   : contrasts.csv
+  outdir                      : /homes/daniel.thomson/projects/MGIvsIllumina/nfDifferentialAbundance_GRCh38_ensembl/outs
+
+Abundance values
+  matrix                      : /homes/daniel.thomson/projects/MGIvsIllumina/nfRNAseq_GRCh38_ensembl/nfcoreRNAseq-outs/star_salmon/salmon.merged.gene_counts.tsv
+  transcript_length_matrix    : /homes/daniel.thomson/projects/MGIvsIllumina/nfRNAseq_GRCh38_ensembl/nfcoreRNAseq-outs/star_salmon/salmon.merged.gene_lengths.tsv
+  affy_cel_files_archive      : null
+  querygse                    : null
+
+Affy input options
+  affy_cdfname                : null
+
+Proteus input options
+  proteus_round_digits        : -1
+
+Filtering
+  filtering_min_abundance     : 1
+  filtering_min_samples       : 1
+
+Differential analysis
+  differential_min_fold_change: 2
+  differential_max_pval       : 1
+
+Limma specific options (microarray only)
+  limma_spacing               : null
+  limma_block                 : null
+  limma_correlation           : null
+  limma_p_value               : 1
+
+GSEA
+  gsea_run                    : true
+  gsea_zip_report             : true
+  gsea_gene_sets              : /homes/daniel.thomson/References/GSEA/c5.all.v2023.2.Hs.symbols.gmt
+
+Shiny app settings
+  shinyngs_shinyapps_account  : null
+  shinyngs_shinyapps_app_name : null
+
+Reporting options
+  report_file                 : /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/assets/differentialabundance_report.Rmd
+  email                       : daniel.thomson@sahmri.com
+  logo_file                   : /cancer/storage/SAGC/workflows/nf-qc-sagc/prod/docs/figures/sagc-logo.png
+  css_file                    : /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/assets/nf-core_style.css
+  citations_file              : /homes/daniel.thomson/.nextflow/assets/nf-core/differentialabundance/CITATIONS.md
+  report_title                : MGIvsIllumina
+  report_author               : Daniel Thomson (daniel.thomson@sahmri.com.au)
+  report_description          : null
+  report_scree                : false
+
+Reference genome options
+  gtf                         : /homes/daniel.thomson/References/GRCh38/Ensembl_download/Homo_sapiens.GRCh38.111.gtf
+
+Institutional config options
+  config_profile_name         : RNA-seq profile
+  config_profile_description  : Settings for RNA-seq analysis
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+------------------------------------------------------
+If you use nf-core/differentialabundance for your analysis please cite:
+
+* The pipeline
+  https://doi.org/10.5281/zenodo.7568000
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/nf-core/differentialabundance/blob/master/CITATIONS.md
+
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (1)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (1)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (2)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (5)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (5)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (5)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (5)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (5)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (6)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (7)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (7)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (10)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (11)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (12)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (12)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (12)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (12)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (12)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (12)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (13)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[60/670d65] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (13)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[60/670d65] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (14)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[60/670d65] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[e2/d8f315] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (14)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[60/670d65] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[e2/d8f315] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+[-        ] process > NFCORE_DIFFERENTIALABUNDANC... -
+
+executor >  local (15)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[60/670d65] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[e2/d8f315] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[48/110e9c] process > NFCORE_DIFFERENTIALABUNDANC... [  0%] 0 of 1
+
+executor >  local (15)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[60/670d65] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[e2/d8f315] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[48/110e9c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+
+executor >  local (15)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[60/670d65] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[e2/d8f315] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[48/110e9c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+-[nf-core/differentialabundance] Sent summary e-mail to daniel.thomson@sahmri.com (sendmail)-
+-[nf-core/differentialabundance] Pipeline completed successfully-
+
+executor >  local (15)
+[69/b362c7] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[13/f2a5c0] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[ab/0cba5b] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[85/03330d] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[09/daf9ef] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[82/e77757] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[8e/6e785c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[55/e6bf8a] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[c0/130293] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[03/008834] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[59/be34fd] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[60/670d65] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[0f/08849f] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[e2/d8f315] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+[48/110e9c] process > NFCORE_DIFFERENTIALABUNDANC... [100%] 1 of 1 ✔
+-[nf-core/differentialabundance] Sent summary e-mail to daniel.thomson@sahmri.com (sendmail)-
+-[nf-core/differentialabundance] Pipeline completed successfully-
+Completed at: 14-Aug-2024 12:02:21
+Duration    : 38m 4s
+CPU hours   : 1.4
+Succeeded   : 15
+
+
+#### FINISHED ####

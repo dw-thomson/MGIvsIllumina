@@ -1,0 +1,13 @@
+sample,fastq_1,fastq_2,strandedness
+A_MGI,../fastq.trimmed/23-00586_S1_R1_001.fastq.gz,../fastq.trimmed/23-00586_S1_R2_001.fastq.gz,auto
+B_MGI,../fastq.trimmed/23-00587_S2_R1_001.fastq.gz,../fastq.trimmed/23-00587_S2_R2_001.fastq.gz,auto
+C_MGI,../fastq.trimmed/23-00588_S3_R1_001.fastq.gz,../fastq.trimmed/23-00588_S3_R2_001.fastq.gz,auto
+D_MGI,../fastq.trimmed/23-00589_S4_R1_001.fastq.gz,../fastq.trimmed/23-00589_S4_R2_001.fastq.gz,auto
+E_MGI,../fastq.trimmed/23-00590_S5_R1_001.fastq.gz,../fastq.trimmed/23-00590_S5_R2_001.fastq.gz,auto
+F_MGI,../fastq.trimmed/23-00591_S6_R1_001.fastq.gz,../fastq.trimmed/23-00591_S6_R2_001.fastq.gz,auto
+A_Illumina,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00586_R1.fastq.gz,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00586_R2.fastq.gz,auto
+B_Illumina,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00587_R1.fastq.gz,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00587_R2.fastq.gz,auto
+C_Illumina,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00588_R1.fastq.gz,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00588_R2.fastq.gz,auto
+D_Illumina,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00589_R1.fastq.gz,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00589_R2.fastq.gz,auto
+E_Illumina,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00590_R1.fastq.gz,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00590_R2.fastq.gz,auto
+F_Illumina,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00591_R1.fastq.gz,../SAGCQA0625-1_DebWhite_24042023/fastq/23-00591_R2.fastq.gz,auto
