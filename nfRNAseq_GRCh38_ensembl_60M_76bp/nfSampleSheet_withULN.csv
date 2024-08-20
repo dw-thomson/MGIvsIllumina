@@ -1,0 +1,15 @@
+sample,fastq_1,fastq_2,strandedness
+23-00586_MGI-G400,../fastq.trimmed/subset/23-00586_S1_R1_001.fastq.gz,../fastq.trimmed/subset/23-00586_S1_R2_001.fastq.gz,auto
+23-00587_MGI-G400,../fastq.trimmed/subset/23-00587_S2_R1_001.fastq.gz,../fastq.trimmed/subset/23-00587_S2_R2_001.fastq.gz,auto
+23-00588_MGI-G400,../fastq.trimmed/subset/23-00588_S3_R1_001.fastq.gz,../fastq.trimmed/subset/23-00588_S3_R2_001.fastq.gz,auto
+23-00589_MGI-G400,../fastq.trimmed/subset/23-00589_S4_R1_001.fastq.gz,../fastq.trimmed/subset/23-00589_S4_R2_001.fastq.gz,auto
+23-00590_MGI-G400,../fastq.trimmed/subset/23-00590_S5_R1_001.fastq.gz,../fastq.trimmed/subset/23-00590_S5_R2_001.fastq.gz,auto
+23-00591_MGI-G400,../fastq.trimmed/subset/23-00591_S6_R1_001.fastq.gz,../fastq.trimmed/subset/23-00591_S6_R2_001.fastq.gz,auto
+23-00592_MGI-G400,../fastq.trimmed/subset/23-00592_S7_R1_001.fastq.gz,../fastq.trimmed/subset/23-00592_S7_R2_001.fastq.gz,auto
+23-00586_NextSeq,../fastq.trimmed/subset/23-00586_R1.fastq.gz,../fastq.trimmed/subset/23-00586_R2.fastq.gz,auto
+23-00587_NextSeq,../fastq.trimmed/subset/23-00587_R1.fastq.gz,../fastq.trimmed/subset/23-00587_R2.fastq.gz,auto
+23-00588_NextSeq,../fastq.trimmed/subset/23-00588_R1.fastq.gz,../fastq.trimmed/subset/23-00588_R2.fastq.gz,auto
+23-00589_NextSeq,../fastq.trimmed/subset/23-00589_R1.fastq.gz,../fastq.trimmed/subset/23-00589_R2.fastq.gz,auto
+23-00590_NextSeq,../fastq.trimmed/subset/23-00590_R1.fastq.gz,../fastq.trimmed/subset/23-00590_R2.fastq.gz,auto
+23-00591_NextSeq,../fastq.trimmed/subset/23-00591_R1.fastq.gz,../fastq.trimmed/subset/23-00591_R2.fastq.gz,auto
+23-00592_NextSeq,../fastq.trimmed/subset/23-00592_R1.fastq.gz,../fastq.trimmed/subset/23-00592_R2.fastq.gz,auto

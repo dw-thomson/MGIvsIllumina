@@ -83,3 +83,8 @@ nextflow run nf-core/rnaseq \
         -resume
 
 ```
+# rerunning with subset fastqs to 60M
+cd ~/projects/MGIvsIllumina/fastq.trimmed
+gunzip *
+
+cp ../SAGCQA0625-1_DebWhite_24042023/fastq/*.gz ~/projects/MGIvsIllumina/fastq.trimmed
