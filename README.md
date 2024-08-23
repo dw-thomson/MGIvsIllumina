@@ -4,7 +4,11 @@ daniel thomson
 - I'm putting some data together for a direct comparison of MGI vs Illumina,
 - the only dataset I am aware we have access to is Deb White's SAGCQA0625-1
 - RNAseq dataset, 6 ALL blood samples, sequenced on both G400 and Nextseq
-- I am going to run through nf-core/RNAseq together (12 samples) to get a better direct comparison analysis
+- I am running nf-core/RNAseq with both datasets together (12 samples) to get a better direct comparison analysis
+- There was quote a big difference in differentially expressed genes ; >300 downregulated with Illumina, 
+	- the genes that were "down regulated" were largely 'processed-pseudogenes" which hint that mapping was the biggest difference
+	- to see how much length and depths matters, I am reanalysing after trimming MGI to 76nt and subsampling all samples to 60M reads.
+	- length and depth explained some of the difference, but not all 
 
 ```bash
 BaseDir='/homes/daniel.thomson/projects/MGIvsIllumina'
