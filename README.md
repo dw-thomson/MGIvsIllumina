@@ -5,10 +5,16 @@ daniel thomson
 - the only dataset I am aware we have access to is Deb White's SAGCQA0625-1
 - RNAseq dataset, 6 ALL blood samples, sequenced on both G400 and Nextseq
 - I am running nf-core/RNAseq with both datasets together (12 samples) to get a better direct comparison analysis
-- There was quote a big difference in differentially expressed genes ; >300 downregulated with Illumina, 
+- There was quote a big difference in differentially expressed genes ; 329 downregulated with Illumina, 
 	- the genes that were "down regulated" were largely 'processed-pseudogenes" which hint that mapping was the biggest difference
 	- to see how much length and depths matters, I am reanalysing after trimming MGI to 76nt and subsampling all samples to 60M reads.
 	- length and depth explained some of the difference, but not all 
+
+|                                | up | down |
+| ------------------------------ | -- | ---- |
+| MGIvsIllumina                  | 7  | 329  |
+| same length 76bp               | 1  | 212  |
+| same length 76pb and depth 60M | 3  | 183  |
 
 ```bash
 BaseDir='/homes/daniel.thomson/projects/MGIvsIllumina'
@@ -92,3 +98,7 @@ cd ~/projects/MGIvsIllumina/fastq.trimmed
 gunzip *
 
 cp ../SAGCQA0625-1_DebWhite_24042023/fastq/*.gz ~/projects/MGIvsIllumina/fastq.trimmed
+
+
+# CLEANUP
+- I deleted all bams, moved outdir to it's own directory
