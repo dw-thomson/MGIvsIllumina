@@ -100,5 +100,10 @@ gunzip *
 cp ../SAGCQA0625-1_DebWhite_24042023/fastq/*.gz ~/projects/MGIvsIllumina/fastq.trimmed
 
 
-# CLEANUP
+- CLEANUP
 - I deleted all bams, moved outdir to it's own directory
+- these looked good
+
+# METAGENOMICS analysis
+- a group asked specifically for information on MGI vs Illumina example data for metagenomics, I thought it was worth putting this data through kraken as well.
+-
