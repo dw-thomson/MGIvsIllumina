@@ -104,9 +104,32 @@ cp ../SAGCQA0625-1_DebWhite_24042023/fastq/*.gz ~/projects/MGIvsIllumina/fastq.t
 - I deleted all bams, moved outdir to it's own directory
 - these looked good
 
-# METAGENOMICS analysis
-- a group asked specifically for information on MGI vs Illumina example data for metagenomics, I thought it was worth putting this data through kraken as well.
--
 
 # nf-core/RNAvar
 I thought I'd try running it through this pipeline aswell (5Nov)
+
+this required some debugging, but this command worked eventually
+
+```
+BaseDir='/homes/daniel.thomson/projects/MGIvsIllumina/nfRNAvar_ensembl_60M_76bp'
+OutDir=${BaseDir}/outs
+cd ${BaseDir}
+mkdir -p ${OutDir}
+
+nextflow run nf-core/rnavar \
+        -profile sahmri \
+        -c ${BaseDir}/nextflow.config \
+        -r 1.0.0 \
+        --input ${BaseDir}/nfSampleSheet.csv \
+        --outdir ${OutDir} \
+        --fasta /homes/daniel.thomson/References/GRCh38/Ensembl_download/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa \
+        --gtf /homes/daniel.thomson/References/GRCh38/Ensembl_download/Homo_sapiens.GRCh38.111.gtf \
+        --email daniel.thomson@sahmri.com \
+        --multiqc_title MGIvsIllumina_nfRNAvar_ensembl_60M_76bp \
+        --dbsnp /homes/daniel.thomson/References/GRCh38/Ensembl_download/test_unzip/homo_sapiens_somatic_incl_consequences.vcf.gz \
+        --dbsnp_tbi /homes/daniel.thomson/References/GRCh38/Ensembl_download/test_unzip/homo_sapiens_somatic_incl_consequences.vcf.gz.tbi \
+        --read_length 150 \
+        --star_index /homes/daniel.thomson/References/GRCh38/Ensembl_download/star_genome_generate_149bp \
+        --star_ignore_sjdbgtf \
+        -resume
+```
